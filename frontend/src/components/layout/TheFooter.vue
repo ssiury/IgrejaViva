@@ -14,20 +14,35 @@ const { strings } = useStrings()
           <span>{{ strings.footer.marca }}</span>
         </div>
         <div class="footer-social">
-          <a href="#" :aria-label="strings.footer.redeInstagram">
+          <a
+            href="https://www.instagram.com/igrejaviva.foursquare/"
+            target="_blank"
+            rel="noopener noreferrer"
+            :aria-label="strings.footer.redeInstagram"
+          >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
               <rect x="3" y="3" width="18" height="18" rx="5" />
               <circle cx="12" cy="12" r="4" />
               <circle cx="17.5" cy="6.5" r="1" />
             </svg>
           </a>
-          <a href="#" :aria-label="strings.footer.redeYoutube">
+          <a
+            href="https://www.youtube.com/@quadrangular.jdbrasil8816"
+            target="_blank"
+            rel="noopener noreferrer"
+            :aria-label="strings.footer.redeYoutube"
+          >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
               <rect x="2" y="5" width="20" height="14" rx="4" />
               <path d="M10 9.5v5l5-2.5z" fill="currentColor" stroke="none" />
             </svg>
           </a>
-          <a href="#" :aria-label="strings.footer.redeWhatsapp">
+          <a
+            href="https://wa.me/556291876700"
+            target="_blank"
+            rel="noopener noreferrer"
+            :aria-label="strings.footer.redeWhatsapp"
+          >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
               <path
                 d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 20l1.2-5.5A8.4 8.4 0 1 1 21 11.5z"
