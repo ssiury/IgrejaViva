@@ -1,6 +1,6 @@
 <script setup>
 import { useStrings } from '@/composables/useStrings'
-import igrejaFoto from '@/assets/images/igreja.png'
+import igrejaFoto from '@/assets/images/igrejaviva.jpg'
 
 const { strings } = useStrings()
 </script>
