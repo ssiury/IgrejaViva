@@ -1,6 +1,6 @@
 <script setup>
 import { useStrings } from '@/composables/useStrings'
-import logoMark from '@/assets/images/logo-mark.png'
+import igrejaFoto from '@/assets/images/igreja.png'
 
 const { strings } = useStrings()
 </script>
@@ -9,7 +9,7 @@ const { strings } = useStrings()
   <section class="sobre" id="sobre">
     <div class="wrap sobre-grid">
       <div class="sobre-visual" v-reveal>
-        <img :src="logoMark" alt="" />
+        <img :src="igrejaFoto" alt="" />
       </div>
       <div class="sobre-copy">
         <div class="eyebrow" v-reveal>
