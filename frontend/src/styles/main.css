@@ -376,7 +376,7 @@ section {
 }
 .sobre-grid {
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
+  grid-template-columns: 1.6fr 1fr;
   gap: 64px;
   align-items: center;
 }
