@@ -2,10 +2,15 @@
 import { onMounted } from 'vue'
 import { useStrings } from '@/composables/useStrings'
 import { useInformacaoIgreja } from '@/composables/useInformacaoIgreja'
-import logoMark from '@/assets/images/logo-mark.png'
 
 const { strings } = useStrings()
 const { informacaoIgreja, carregando, erro, carregar } = useInformacaoIgreja()
+
+const NOME_IGREJA = 'Igreja Viva Foursquare'
+
+// Ponto do Google Maps (https://maps.app.goo.gl/7GucD6VPi3Qwcs6SA), já com o
+// pin da igreja selecionado — o CID vem do place_id resolvido desse link.
+const MAPA_SRC = 'https://maps.google.com/maps?cid=9110119413147022634&output=embed'
 
 onMounted(carregar)
 </script>
@@ -71,10 +76,13 @@ onMounted(carregar)
         </template>
       </div>
       <div class="map-frame" v-reveal>
-        <svg viewBox="0 0 200 160" fill="none" stroke="#f4ece0" stroke-width="0.7">
-          <path d="M0 40h200M0 80h200M0 120h200M40 0v160M100 0v160M160 0v160" />
-        </svg>
-        <img class="map-pin" :src="logoMark" alt="" />
+        <iframe
+          :src="MAPA_SRC"
+          :title="`Mapa de localização — ${NOME_IGREJA}`"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
   </section>

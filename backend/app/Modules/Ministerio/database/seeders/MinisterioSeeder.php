@@ -11,48 +11,64 @@ class MinisterioSeeder extends Seeder
     {
         $ministerios = [
             [
-                'nome' => 'Kids Viva',
-                'descricao' => 'Ensino bíblico e brincadeiras para crianças de 2 a 10 anos, durante todos os cultos de domingo.',
-                'icone' => 'kids',
+                'nome' => 'Louvor',
+                'descricao' => 'Equipe de música e adoração — sempre com espaço para novos vocais e instrumentistas.',
+                'icone' => 'louvor',
                 'ordem' => 1,
                 'ativo' => true,
             ],
             [
-                'nome' => 'Jovens',
-                'descricao' => 'Encontros semanais com louvor, conversa franca sobre a vida e discipulado para adolescentes e jovens.',
-                'icone' => 'jovens',
+                'nome' => 'Mídia',
+                'descricao' => 'Fotos, artes e redes sociais que registram e comunicam o que Deus faz na igreja.',
+                'icone' => 'midia',
                 'ordem' => 2,
                 'ativo' => true,
             ],
             [
-                'nome' => 'Louvor',
-                'descricao' => 'Equipe de música e adoração — sempre com espaço para novos vocais e instrumentistas.',
-                'icone' => 'louvor',
+                'nome' => 'Transmissão',
+                'descricao' => 'Som, imagem e transmissão ao vivo dos cultos, para quem está na igreja e para quem assiste de casa.',
+                'icone' => 'transmissao',
                 'ordem' => 3,
                 'ativo' => true,
             ],
             [
-                'nome' => 'Células',
-                'descricao' => 'Pequenos grupos que se reúnem durante a semana, em casas, para estudar a Palavra e orar juntos.',
-                'icone' => 'celulas',
+                'nome' => 'Intercessão',
+                'descricao' => 'Um grupo dedicado à oração — pela igreja, pelas famílias e por cada pedido que chega até nós.',
+                'icone' => 'intercessao',
                 'ordem' => 4,
                 'ativo' => true,
             ],
             [
-                'nome' => 'Casais',
-                'descricao' => 'Encontros e aconselhamento para fortalecer casamentos em qualquer fase da relação.',
-                'icone' => 'casais',
+                'nome' => 'Acolhida',
+                'descricao' => 'A primeira mão que aperta a sua na porta — recepção e cuidado para quem chega, visitante ou membro.',
+                'icone' => 'acolhida',
                 'ordem' => 5,
                 'ativo' => true,
             ],
             [
-                'nome' => 'Ação Social',
-                'descricao' => 'Doações, mutirões e visitas à comunidade ao redor da igreja — fé que se traduz em cuidado prático.',
-                'icone' => 'acao-social',
+                'nome' => 'Infantil',
+                'descricao' => 'Ensino bíblico e brincadeiras para crianças de 2 a 10 anos, durante todos os cultos de domingo.',
+                'icone' => 'infantil',
                 'ordem' => 6,
                 'ativo' => true,
             ],
+            [
+                'nome' => 'Dança',
+                'descricao' => 'Expressão de louvor através da dança, em apresentações e coreografias nos cultos e eventos especiais.',
+                'icone' => 'danca',
+                'ordem' => 7,
+                'ativo' => true,
+            ],
+            [
+                'nome' => 'Diaconato',
+                'descricao' => 'Cuidado prático da casa e das pessoas — organização, apoio logístico e serviço em cada culto.',
+                'icone' => 'diaconato',
+                'ordem' => 8,
+                'ativo' => true,
+            ],
         ];
+
+        Ministerio::query()->whereNotIn('nome', array_column($ministerios, 'nome'))->delete();
 
         foreach ($ministerios as $ministerio) {
             Ministerio::query()->updateOrCreate(['nome' => $ministerio['nome']], $ministerio);

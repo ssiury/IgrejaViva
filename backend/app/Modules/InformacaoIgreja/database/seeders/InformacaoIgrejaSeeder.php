@@ -10,12 +10,12 @@ class InformacaoIgrejaSeeder extends Seeder
     public function run(): void
     {
         InformacaoIgreja::query()->updateOrCreate(
-            ['email' => 'contato@igrejaviva.org'],
+            ['id' => 1],
             [
-                'endereco' => 'Rua das Palmeiras, 250 — Setor Central, Goiânia · GO',
-                'telefone' => '(62) 3000-0000',
-                'email' => 'contato@igrejaviva.org',
-                'horario_cultos_resumo' => 'Domingos às 9h e 19h · Quartas às 20h',
+                'endereco' => 'Rua 3, 44 — Jardim Brasil, Goiânia · GO, 74740-530',
+                'telefone' => '(62) 9187-6700',
+                'email' => 'comunicacaojdbrasil@gmail.com',
+                'horario_cultos_resumo' => 'Domingos às 9h30 e 18h · Terças às 15h e 19h30',
                 'instagram_url' => 'https://instagram.com',
                 'youtube_url' => 'https://youtube.com',
                 'whatsapp_url' => 'https://wa.me',
