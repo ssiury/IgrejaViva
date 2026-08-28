@@ -29,6 +29,34 @@
     "versiculo": "\"Eu vim para que tenham vida, e a tenham com abundância.\"",
     "versiculoReferencia": "João 10:10"
   },
+  "identidade": {
+    "eyebrow": "Nossa identidade",
+    "titulo": "Somos Uma Igreja, Uma Família!",
+    "subtitulo": "Isso é o que nos guia — em cada culto, célula e decisão.",
+    "itens": [
+      {
+        "tag": "Visão",
+        "texto": "Ganhar todas as pessoas, <span class=\"accent\">a qualquer custo</span>, para Jesus."
+      },
+      {
+        "tag": "Valores",
+        "texto": "Somos uma igreja que crê e vive a Palavra de Deus <span class=\"accent\">em amor</span>, incluindo pessoas na família do Céu e trazendo o sobrenatural à terra em todas as áreas do viver."
+      },
+      {
+        "tag": "Propósito",
+        "texto": "Ser uma igreja bíblica dirigida pelos propósitos de Jesus:",
+        "chips": ["Missões", "Adoração", "Serviço", "Comunhão", "Discipulado"]
+      },
+      {
+        "tag": "Missão",
+        "texto": "Transformar pessoas comuns em <span class=\"accent\">extraordinários discípulos</span> de Jesus."
+      }
+    ],
+    "cultura": {
+      "tag": "Cultura",
+      "texto": "Ser uma igreja família pastoreada por uma rede de células sob os princípios dos <span class=\"accent\">cinco dons de governo</span>."
+    }
+  },
   "cultos": {
     "eyebrow": "Agenda",
     "titulo": "Horários de culto",
@@ -59,26 +87,6 @@
     "contatoTitulo": "Contato",
     "carregando": "Carregando informações...",
     "erro": "Não foi possível carregar as informações de contato. Tente novamente mais tarde."
-  },
-  "visitaForm": {
-    "eyebrow": "Quero visitar",
-    "titulo": "Nos conte que você vem",
-    "subtitulo": "Preencha os dados abaixo e alguém da nossa equipe vai te receber com carinho na porta.",
-    "campoNome": "Nome",
-    "campoNomePlaceholder": "Seu nome completo",
-    "campoTelefone": "Telefone",
-    "campoTelefonePlaceholder": "(62) 99999-9999",
-    "campoEmail": "E-mail",
-    "campoEmailPlaceholder": "voce@email.com",
-    "campoCulto": "Culto de preferência",
-    "campoCultoPlaceholder": "Selecione um culto (opcional)",
-    "campoMensagem": "Mensagem",
-    "campoMensagemPlaceholder": "Conte um pouco sobre você, se quiser (opcional)",
-    "botaoEnviar": "Quero visitar",
-    "botaoEnviando": "Enviando...",
-    "sucesso": "Recebemos sua solicitação! Em breve alguém da nossa equipe vai entrar em contato.",
-    "erroValidacao": "Verifique os campos destacados abaixo.",
-    "erroGenerico": "Não foi possível enviar sua solicitação. Tente novamente."
   },
   "footer": {
     "marca": "Igreja Viva",
