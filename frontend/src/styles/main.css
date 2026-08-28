@@ -376,7 +376,7 @@ section {
 }
 .sobre-grid {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: 1.3fr 1fr;
   gap: 64px;
   align-items: center;
 }
@@ -815,7 +815,7 @@ footer {
     grid-template-columns: 1fr;
   }
   .sobre-visual {
-    max-width: 340px;
+    max-width: none;
     margin: 0 auto;
   }
   .cultos-grid {
