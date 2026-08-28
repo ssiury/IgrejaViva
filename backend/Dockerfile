@@ -7,6 +7,7 @@ RUN apk add --no-cache \
         icu-dev \
         oniguruma-dev \
         libzip-dev \
+        su-exec \
         $( [ "$APP_ENV" != "production" ] && echo "linux-headers" ) \
     && docker-php-ext-install pdo pdo_pgsql pgsql mbstring intl zip opcache \
     && if [ "$APP_ENV" != "production" ]; then \
@@ -33,8 +34,10 @@ RUN mkdir -p storage/framework/{cache,sessions,testing,views} storage/logs boots
     && chown -R www-data:www-data storage bootstrap/cache \
     && chmod +x docker/entrypoint.sh
 
-USER www-data
-
+# O entrypoint precisa rodar como root: em dev local o volume bind-mount
+# (./backend:/var/www/html) esconde o vendor/ e as permissões gravadas no
+# build, então ele reprovisiona tudo e só então usa su-exec para baixar
+# privilégio a www-data antes de subir o php-fpm.
 EXPOSE 9000
 
 ENTRYPOINT ["docker/entrypoint.sh"]
