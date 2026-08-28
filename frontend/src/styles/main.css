@@ -374,6 +374,9 @@ section {
 .sobre {
   background: var(--bg-soft);
 }
+.sobre .wrap {
+  max-width: 1320px;
+}
 .sobre-grid {
   display: grid;
   grid-template-columns: 1.6fr 1fr;
