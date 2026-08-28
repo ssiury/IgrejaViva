@@ -1,0 +1,60 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      args:
+        APP_ENV: local
+    volumes:
+      - ./backend:/var/www/html
+    env_file: ./backend/.env
+    depends_on:
+      - db
+    networks:
+      - igreja-viva
+
+  nginx-backend:
+    image: nginx:alpine
+    volumes:
+      - ./backend:/var/www/html
+      - ./docker/nginx/backend.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - '8000:80'
+    depends_on:
+      - backend
+    networks:
+      - igreja-viva
+
+  frontend:
+    build:
+      context: ./frontend
+      target: dev
+    volumes:
+      - ./frontend:/app
+      - frontend-node-modules:/app/node_modules
+    env_file: ./frontend/.env
+    ports:
+      - '5173:5173'
+    depends_on:
+      - nginx-backend
+    networks:
+      - igreja-viva
+
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: igreja_viva
+      POSTGRES_USER: igreja_viva
+      POSTGRES_PASSWORD: secret
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - '5433:5432'
+    networks:
+      - igreja-viva
+
+networks:
+  igreja-viva:
+
+volumes:
+  db-data:
+  frontend-node-modules:
